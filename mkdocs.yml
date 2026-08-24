@@ -1,0 +1,170 @@
+# Archivo generado automáticamente desde public-manifest.yml y public/mkdocs-base.yml.
+# No editar a mano: regenera con `python3 scripts/generar_nav_mkdocs.py`.
+
+site_name: Introducción a Python
+site_description: Apuntes y ejercicios de introducción a Python para ciclos formativos
+  de informática
+site_author: Victoria
+site_url: https://victoria-nr.github.io/python-intro-alumnos/
+repo_name: python-intro-alumnos
+repo_url: https://github.com/victoria-nr/python-intro-alumnos
+edit_uri: ''
+theme:
+  name: material
+  language: es
+  features:
+  - navigation.sections
+  - navigation.expand
+  - navigation.top
+  - search.highlight
+  - search.suggest
+  - content.code.copy
+  - content.tabs.link
+  palette:
+  - scheme: default
+    primary: blue
+    accent: indigo
+markdown_extensions:
+- admonition
+- attr_list
+- md_in_html
+- toc:
+    permalink: true
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.superfences
+- pymdownx.details
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+not_in_nav: '**/archivos-solucion/**'
+nav:
+- Inicio: index.md
+- Metodología flipped: metodologia-flipped.md
+- Instalación: instalacion.md
+- Git y GitHub para entregas: git-github-entregas.md
+- Entregas: entregas.md
+- Unidades:
+  - UT1 - Introducción, entorno y tipos de datos:
+    - Presentación: unidades/u01-introduccion-python/index.md
+    - Alineación RA: unidades/u01-introduccion-python/alineacion-ra.md
+    - Teoría:
+      - Introducción a Python: unidades/u01-introduccion-python/teoria/01-introduccion-python.md
+      - Entorno de desarrollo: unidades/u01-introduccion-python/teoria/02-entorno-vscode.md
+      - Datos y variables: unidades/u01-introduccion-python/teoria/03-datos-variables.md
+      - Números y operadores: unidades/u01-introduccion-python/teoria/04-numeros-operadores.md
+      - Cadenas y entrada/salida: unidades/u01-introduccion-python/teoria/05-cadenas-entrada-salida.md
+    - Ejercicios:
+      - Índice: unidades/u01-introduccion-python/ejercicios/index.md
+      - Practicar: unidades/u01-introduccion-python/ejercicios/practicar/index.md
+      - Entregar: unidades/u01-introduccion-python/ejercicios/entregar/index.md
+    - Soluciones:
+      - Índice: unidades/u01-introduccion-python/soluciones/index.md
+      - Practicar: unidades/u01-introduccion-python/soluciones/practicar/index.md
+      - Entregar: unidades/u01-introduccion-python/soluciones/entregar/index.md
+  - UT2 - Objetos predefinidos y cadenas de texto:
+    - Presentación: unidades/u02-objetos-cadenas/index.md
+    - Alineación RA: unidades/u02-objetos-cadenas/alineacion-ra.md
+    - Teoría:
+      - Objetos predefinidos, funciones y métodos: unidades/u02-objetos-cadenas/teoria/01-objetos-predefinidos.md
+      - Métodos habituales de cadenas: unidades/u02-objetos-cadenas/teoria/02-metodos-cadenas.md
+      - Formateo de cadenas, f-strings y Unicode: unidades/u02-objetos-cadenas/teoria/03-formateo-fstrings-unicode.md
+    - Ejercicios:
+      - Índice: unidades/u02-objetos-cadenas/ejercicios/index.md
+      - Practicar: unidades/u02-objetos-cadenas/ejercicios/practicar/index.md
+      - Entregar: unidades/u02-objetos-cadenas/ejercicios/entregar/index.md
+    - Soluciones:
+      - Índice: unidades/u02-objetos-cadenas/soluciones/index.md
+      - Practicar: unidades/u02-objetos-cadenas/soluciones/practicar/index.md
+      - Entregar: unidades/u02-objetos-cadenas/soluciones/entregar/index.md
+  - UT3 - Control de flujo y librerías útiles para sysadmin:
+    - Presentación: unidades/u03-control-flujo-sysadmin/index.md
+    - Alineación RA: unidades/u03-control-flujo-sysadmin/alineacion-ra.md
+    - Teoría:
+      - 'Condicionales: tomar decisiones en un programa': unidades/u03-control-flujo-sysadmin/teoria/01-condicionales.md
+      - Bucles while: unidades/u03-control-flujo-sysadmin/teoria/02-while.md
+      - Bucles for, range() y recorridos: unidades/u03-control-flujo-sysadmin/teoria/03-for-range.md
+      - Depuración, errores y excepciones: unidades/u03-control-flujo-sysadmin/teoria/04-depuracion-excepciones.md
+      - Librerías útiles para administradores de sistemas: unidades/u03-control-flujo-sysadmin/teoria/05-librerias-sysadmin.md
+    - Ejercicios:
+      - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/index.md
+      - Practicar:
+        - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/practicar/index.md
+        - 'Ejercicios de clase: condicionales': unidades/u03-control-flujo-sysadmin/ejercicios/practicar/01-condicionales.md
+        - 'Ejercicios de clase: bucle while': unidades/u03-control-flujo-sysadmin/ejercicios/practicar/02-while.md
+        - 'Ejercicios de clase: bucle for': unidades/u03-control-flujo-sysadmin/ejercicios/practicar/03-for.md
+      - Entregar:
+        - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/entregar/index.md
+        - 'Ejercicios entregables: condicionales con enfoque sysadmin': unidades/u03-control-flujo-sysadmin/ejercicios/entregar/01-entregables-condicionales.md
+        - 'Ejercicios entregables: bucles con enfoque sysadmin': unidades/u03-control-flujo-sysadmin/ejercicios/entregar/02-entregables-bucles.md
+    - Soluciones:
+      - Índice: unidades/u03-control-flujo-sysadmin/soluciones/index.md
+      - Practicar:
+        - Índice: unidades/u03-control-flujo-sysadmin/soluciones/practicar/index.md
+        - Condicionales: unidades/u03-control-flujo-sysadmin/soluciones/practicar/condicionales/index.md
+        - Bucle while: unidades/u03-control-flujo-sysadmin/soluciones/practicar/while/index.md
+        - Bucle for: unidades/u03-control-flujo-sysadmin/soluciones/practicar/for/index.md
+      - Entregar:
+        - Índice: unidades/u03-control-flujo-sysadmin/soluciones/entregar/index.md
+        - Condicionales: unidades/u03-control-flujo-sysadmin/soluciones/entregar/condicionales/index.md
+        - Bucles: unidades/u03-control-flujo-sysadmin/soluciones/entregar/bucles/index.md
+  - UT4 - Fundamentos de POO como ampliación:
+    - Presentación: unidades/u04-poo-ampliacion/index.md
+    - Alineación RA: unidades/u04-poo-ampliacion/alineacion-ra.md
+    - Teoría:
+      - 'Ampliación: clases y objetos propios': unidades/u04-poo-ampliacion/teoria/01-clases-objetos.md
+      - 'Ampliación: herencia y métodos estáticos': unidades/u04-poo-ampliacion/teoria/02-herencia-ampliacion.md
+    - Ejercicios:
+      - Índice: unidades/u04-poo-ampliacion/ejercicios/index.md
+      - Practicar: unidades/u04-poo-ampliacion/ejercicios/practicar/index.md
+      - Entregar: unidades/u04-poo-ampliacion/ejercicios/entregar/index.md
+    - Soluciones:
+      - Índice: unidades/u04-poo-ampliacion/soluciones/index.md
+      - Practicar: unidades/u04-poo-ampliacion/soluciones/practicar/index.md
+  - UT5 - Estructuras de datos:
+    - Presentación: unidades/u05-estructuras-datos/index.md
+    - Alineación RA: unidades/u05-estructuras-datos/alineacion-ra.md
+    - Teoría:
+      - Listas y tuplas: unidades/u05-estructuras-datos/teoria/01-listas-tuplas.md
+      - 'Cadenas y listas: split(), join() y recorridos': unidades/u05-estructuras-datos/teoria/02-cadenas-listas.md
+      - Diccionarios y conjuntos: unidades/u05-estructuras-datos/teoria/03-diccionarios-conjuntos.md
+      - Elegir estructura de datos y primera idea de expresiones regulares: unidades/u05-estructuras-datos/teoria/04-elegir-estructura-regex.md
+    - Ejercicios:
+      - Índice: unidades/u05-estructuras-datos/ejercicios/index.md
+      - Practicar:
+        - Índice: unidades/u05-estructuras-datos/ejercicios/practicar/index.md
+        - Ejercicios para practicar listas: unidades/u05-estructuras-datos/ejercicios/practicar/01-listas.md
+        - Ejercicios para practicar diccionarios: unidades/u05-estructuras-datos/ejercicios/practicar/02-diccionarios.md
+      - Entregar: unidades/u05-estructuras-datos/ejercicios/entregar/index.md
+    - Soluciones:
+      - Índice: unidades/u05-estructuras-datos/soluciones/index.md
+      - Practicar:
+        - Índice: unidades/u05-estructuras-datos/soluciones/practicar/index.md
+        - Listas: unidades/u05-estructuras-datos/soluciones/practicar/listas/index.md
+        - Diccionarios: unidades/u05-estructuras-datos/soluciones/practicar/diccionarios/index.md
+      - Entregar: unidades/u05-estructuras-datos/soluciones/entregar/index.md
+  - UT6 - Funciones, módulos, ficheros, pathlib y glob:
+    - Presentación: unidades/u06-funciones-ficheros/index.md
+    - Alineación RA: unidades/u06-funciones-ficheros/alineacion-ra.md
+    - Teoría:
+      - Funciones: unidades/u06-funciones-ficheros/teoria/01-funciones.md
+      - Módulos y paquetes: unidades/u06-funciones-ficheros/teoria/02-modulos.md
+      - 'Ficheros: lectura y escritura': unidades/u06-funciones-ficheros/teoria/03-ficheros.md
+      - pathlib, rutas y búsqueda de archivos con glob: unidades/u06-funciones-ficheros/teoria/04-pathlib-glob.md
+    - Ejercicios:
+      - Índice: unidades/u06-funciones-ficheros/ejercicios/index.md
+      - Practicar:
+        - Índice: unidades/u06-funciones-ficheros/ejercicios/practicar/index.md
+        - Ejercicios de funciones: unidades/u06-funciones-ficheros/ejercicios/practicar/01-funciones.md
+        - Ejercicios para practicar ficheros: unidades/u06-funciones-ficheros/ejercicios/practicar/02-ficheros.md
+        - Ejercicios de sysadmin con glob: unidades/u06-funciones-ficheros/ejercicios/practicar/03-glob.md
+      - Entregar: unidades/u06-funciones-ficheros/ejercicios/entregar/index.md
+    - Soluciones:
+      - Índice: unidades/u06-funciones-ficheros/soluciones/index.md
+      - Practicar:
+        - Índice: unidades/u06-funciones-ficheros/soluciones/practicar/index.md
+        - Ficheros: unidades/u06-funciones-ficheros/soluciones/practicar/ficheros/index.md
+        - Ejercicios con glob: unidades/u06-funciones-ficheros/soluciones/practicar/glob/index.md
+      - Entregar: unidades/u06-funciones-ficheros/soluciones/entregar/index.md
