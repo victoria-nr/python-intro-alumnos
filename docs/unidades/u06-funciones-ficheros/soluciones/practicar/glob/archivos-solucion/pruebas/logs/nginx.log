@@ -1,2 +1,0 @@
-GET / 200
-GET /admin 403
