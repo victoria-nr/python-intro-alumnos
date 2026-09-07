@@ -1,4 +1,4 @@
-# Metodología flipped classroom
+# Metodología flipped classroom (SOLO PRESENCIAL)
 
 Durante el curso trabajaremos con una metodología de aula invertida.
 

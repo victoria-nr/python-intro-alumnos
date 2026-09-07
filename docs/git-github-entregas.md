@@ -48,22 +48,6 @@ No necesitas memorizar términos más avanzados para seguir el curso.
 
 Si todavía no has instalado Git, revisa primero [Instalación](instalacion.md).
 
-Una vez instalado, abre una terminal y configura tu nombre y correo una sola vez:
-
-```bash
-git config --global user.name "Nombre Apellido"
-git config --global user.email "tu_correo@example.com"
-```
-
-Puedes comprobarlo con:
-
-```bash
-git config --global --list
-```
-
-Usa un correo que reconozcas y que puedas asociar con tu cuenta de GitHub.
-
-Si al clonar o al hacer `push` GitHub te pide iniciar sesión, es normal. Sigue la ventana del navegador o de Visual Studio Code y completa el acceso.
 
 ## 4. Qué harás una sola vez al principio del curso
 
@@ -233,9 +217,10 @@ Si no haces `push`, GitHub no verá tus cambios.
 1. Entra en tu repositorio en GitHub.
 2. Si aparece el aviso **Compare & pull request**, púlsalo.
 3. Si no aparece, entra en **Pull requests** y pulsa **New pull request**.
-4. Revisa que la rama base sea `main` y que la rama de comparación sea tu rama, por ejemplo `u01-introduccion-python-practicar`.
-5. Comprueba que en la vista previa aparecen los archivos correctos.
-6. Pulsa **Create pull request**.
+4. En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor. Este paso es muy importante.
+5. Revisa que la rama base sea `main` y que la rama de comparación sea tu rama, por ejemplo `u01-introduccion-python-practicar`.
+6. Comprueba que en la vista previa aparecen los archivos correctos.
+7. Pulsa **Create pull request**.
 
 #### Qué escribir en la Pull Request
 
@@ -271,6 +256,79 @@ Cuando abres la Pull Request empieza la revisión:
 5. Cuando el trabajo ya está correcto, el profesor decide si se da por válido y qué hacer después.
 
 Mientras la entrega siga en revisión, la Pull Request debe quedarse abierta.
+
+#### Qué hacer cuando el profesor solicita cambios (Request changes)
+
+Si el profesor revisa tu Pull Request y selecciona **Request changes**, significa que la entrega necesita algunas correcciones antes de darse por válida.
+
+No debes crear una nueva Pull Request. Debes seguir trabajando sobre la misma.
+
+##### 1. Lee los comentarios del profesor
+
+En GitHub, entra en tu Pull Request y revisa los comentarios recibidos.
+
+Los comentarios pueden aparecer:
+
+- En la pestaña **Conversation**.
+- Sobre líneas concretas de código en la pestaña **Files changed**.
+
+Lee todos los comentarios antes de empezar a modificar el código.
+
+##### 2. Corrige el código en tu ordenador
+
+Las correcciones deben realizarse normalmente en tu copia local del proyecto utilizando tu editor habitual (VS Code, IntelliJ, Eclipse, etc.).
+
+No es necesario modificar el código desde la web de GitHub.
+
+Realiza los cambios solicitados y comprueba que el programa sigue funcionando correctamente.
+
+##### 3. Haz commit y push
+
+Cuando hayas terminado las correcciones:
+
+```bash
+git add .
+git commit -m "Corrige comentarios de la revisión"
+git push
+```
+
+Debes hacer el `push` a la misma rama que utilizaste para crear la Pull Request.
+
+##### 4. La Pull Request se actualiza automáticamente
+
+No necesitas crear una nueva Pull Request.
+
+Cuando haces `push`, GitHub añade automáticamente los nuevos commits a la Pull Request que ya estaba abierta.
+
+El profesor podrá revisar los cambios realizados.
+
+##### 5. Responde a los comentarios
+
+Después de subir los cambios, vuelve a la Pull Request y responde a los comentarios indicando qué has corregido.
+
+Por ejemplo:
+
+> Corregido en el último commit.
+
+o
+
+> He modificado el método para controlar el caso indicado en la revisión.
+
+Esto ayuda al profesor a localizar rápidamente las correcciones realizadas.
+
+##### 6. Espera una nueva revisión
+
+El profesor volverá a revisar la misma Pull Request.
+
+Puede ocurrir que:
+
+- La entrega quede aprobada.
+- Se soliciten nuevas correcciones.
+
+En este último caso, simplemente repite el mismo proceso: corregir → commit → push → revisión.
+
+> **Importante:** mientras la entrega esté siendo revisada o corregida, la Pull Request debe permanecer abierta. No cierres la Pull Request ni crees una nueva para la misma entrega.
+
 
 #### Qué es un merge y qué significa cerrar una Pull Request
 

@@ -24,7 +24,7 @@ No debes entregar ejercicios modificando el repositorio público de apuntes. Las
 
 ## 2. Crear el repositorio desde la plantilla
 
-1. Entra en el repositorio plantilla indicado por el profesor.
+1. Entra en el repositorio plantilla indicado por el profesor. En este caso es: https://github.com/victoria-nr/python-intro-entregas-template
 2. Pulsa **Use this template**.
 3. Elige **Create a new repository**.
 4. Ponle este nombre:
@@ -203,9 +203,10 @@ Cuando termines un bloque de ejercicios de practicar o entregar:
 
 1. Entra en GitHub.
 2. Abre una **Pull Request** desde tu rama hacia `main`.
-3. En la descripción indica qué ejercicios has completado y si esa rama corresponde a `practicar` o a `entregar`.
-4. Indica si has usado IA y para qué.
-5. No hagas merge hasta que el profesor lo indique.
+3. En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor.
+4. En la descripción indica qué ejercicios has completado y si esa rama corresponde a `practicar` o a `entregar`.
+5. Indica si has usado IA y para qué.
+6. No hagas merge hasta que el profesor lo indique.
 
 La Pull Request permite al profesor ver los cambios realizados, revisar el código y dejar comentarios si es necesario.
 
