@@ -47,3 +47,16 @@ nav:
 - Git y GitHub para entregas: git-github-entregas.md
 - Entregas: entregas.md
 - Planificacion del curso: planificacion.md
+- Unidades:
+  - UT1 - Introducción, entorno y tipos de datos:
+    - Presentación: unidades/u01-introduccion-python/index.md
+    - Alineación RA: unidades/u01-introduccion-python/alineacion-ra.md
+    - Teoría:
+      - Introducción a Python: unidades/u01-introduccion-python/teoria/01-introduccion-python.md
+      - Entorno de desarrollo: unidades/u01-introduccion-python/teoria/02-entorno-vscode.md
+      - Datos y variables: unidades/u01-introduccion-python/teoria/03-datos-variables.md
+      - Números y operadores: unidades/u01-introduccion-python/teoria/04-numeros-operadores.md
+      - Cadenas y entrada/salida: unidades/u01-introduccion-python/teoria/05-cadenas-entrada-salida.md
+    - Ejercicios:
+      - Índice: unidades/u01-introduccion-python/ejercicios/index.md
+      - Practicar: unidades/u01-introduccion-python/ejercicios/practicar/index.md
