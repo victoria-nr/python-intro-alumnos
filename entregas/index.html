@@ -1,0 +1,1558 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes y ejercicios de introducción a Python para ciclos formativos de informática">
+      
+      
+        <meta name="author" content="Victoria">
+      
+      
+        <link rel="canonical" href="https://victoria-nr.github.io/python-intro-alumnos/entregas/">
+      
+      
+        <link rel="prev" href="../git-github-entregas/">
+      
+      
+        <link rel="next" href="../planificacion/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Entregas - Introducción a Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#entregas-del-curso-repositorio-privado-de-ejercicios" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Introducción a Python" class="md-header__button md-logo" aria-label="Introducción a Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Entregas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/victoria-nr/python-intro-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    python-intro-alumnos
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Introducción a Python" class="md-nav__button md-logo" aria-label="Introducción a Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a Python
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/victoria-nr/python-intro-alumnos" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    python-intro-alumnos
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodologia-flipped/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodología flipped
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-github-entregas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git y GitHub para entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entregas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-idea-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Idea general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-crear-el-repositorio-desde-la-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crear el repositorio desde la plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-invitar-al-profesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Invitar al profesor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clonar-tu-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clonar tu repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estructura-esperada-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Estructura esperada del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-forma-de-trabajo-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Forma de trabajo recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-hacer-commits-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Hacer commits frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-abrir-una-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Abrir una Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-completar-la-reflexion-de-cada-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Completar la reflexión de cada unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-normas-sobre-el-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Normas sobre el uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-defensa-del-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Defensa del trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-actualizar-el-repositorio-de-apuntes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Actualizar el repositorio de apuntes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificacion del curso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UT1 - Introducción, entorno y tipos de datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UT1 - Introducción, entorno y tipos de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/alineacion-ra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alineación RA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_3" id="__nav_7_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Teoría
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/teoria/01-introduccion-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción a Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/teoria/02-entorno-vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entorno de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/teoria/03-datos-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos y variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/teoria/04-numeros-operadores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Números y operadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/teoria/05-cadenas-entrada-salida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadenas y entrada/salida
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_4" id="__nav_7_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ejercicios
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/ejercicios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidades/u01-introduccion-python/ejercicios/practicar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practicar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-idea-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Idea general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-crear-el-repositorio-desde-la-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Crear el repositorio desde la plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-invitar-al-profesor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Invitar al profesor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-clonar-tu-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Clonar tu repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estructura-esperada-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Estructura esperada del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-forma-de-trabajo-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Forma de trabajo recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-hacer-commits-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Hacer commits frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-abrir-una-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Abrir una Pull Request
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-completar-la-reflexion-de-cada-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Completar la reflexión de cada unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-normas-sobre-el-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Normas sobre el uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-defensa-del-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Defensa del trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-actualizar-el-repositorio-de-apuntes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Actualizar el repositorio de apuntes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="entregas-del-curso-repositorio-privado-de-ejercicios">Entregas del curso: repositorio privado de ejercicios<a class="headerlink" href="#entregas-del-curso-repositorio-privado-de-ejercicios" title="Permanent link">&para;</a></h1>
+<p>Durante el curso usarás un repositorio privado para entregar tus ejercicios de Python.</p>
+<p>Ese repositorio será tu <strong>cuaderno de programación</strong>: ahí irás subiendo las prácticas de todas las unidades, manteniendo un historial de tu trabajo mediante commits.</p>
+<div class="admonition info">
+<p class="admonition-title">Si es tu primera vez con Git</p>
+<p>Antes de seguir, lee <a href="../git-github-entregas/">Tutorial previo: Git y GitHub para tu repositorio de entregas</a>. Ahí tienes el vocabulario básico y el flujo de trabajo paso a paso.</p>
+</div>
+<h2 id="1-idea-general">1. Idea general<a class="headerlink" href="#1-idea-general" title="Permanent link">&para;</a></h2>
+<p>Durante el curso trabajaremos con dos repositorios diferentes:</p>
+<ul>
+<li>El <strong>repositorio de apuntes</strong>, que es este, será público y de solo lectura para el alumnado.</li>
+<li>Tu <strong>repositorio de entregas</strong> será privado.</li>
+<li>El profesor tendrá acceso a tu repositorio privado como colaborador.</li>
+<li>Cada unidad tendrá su propia carpeta.</li>
+<li>Deberás hacer commits frecuentes, no subir todo el trabajo de golpe al final.</li>
+<li>El profesor podrá revisar tu progreso, tus cambios, tus Pull Requests y tu historial de commits.</li>
+</ul>
+<p>No debes entregar ejercicios modificando el repositorio público de apuntes. Las entregas se realizarán únicamente en tu repositorio privado personal.</p>
+<hr />
+<h2 id="2-crear-el-repositorio-desde-la-plantilla">2. Crear el repositorio desde la plantilla<a class="headerlink" href="#2-crear-el-repositorio-desde-la-plantilla" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Entra en el repositorio plantilla indicado por el profesor. En este caso es: https://github.com/victoria-nr/python-intro-entregas-template</li>
+<li>Pulsa <strong>Use this template</strong>.</li>
+<li>Elige <strong>Create a new repository</strong>.</li>
+<li>Ponle este nombre:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python-intro-entregas-nombre-apellido
+</code></pre></div>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python-intro-entregas-ana-garcia
+</code></pre></div>
+<ol>
+<li>Marca el repositorio como <strong>Private</strong>.</li>
+<li>Crea el repositorio.</li>
+</ol>
+<hr />
+<h2 id="3-invitar-al-profesor">3. Invitar al profesor<a class="headerlink" href="#3-invitar-al-profesor" title="Permanent link">&para;</a></h2>
+<p>Después de crear el repositorio privado, debes invitar al profesor como colaborador.</p>
+<p>En GitHub:</p>
+<ol>
+<li>Entra en tu repositorio privado.</li>
+<li>Ve a <strong>Settings</strong>.</li>
+<li>Entra en <strong>Collaborators</strong> o <strong>Collaborators and teams</strong>.</li>
+<li>Pulsa <strong>Add people</strong>.</li>
+<li>Busca el usuario de GitHub del profesor.</li>
+<li>Envía la invitación.</li>
+</ol>
+<p>El profesor indicará en clase cuál es su usuario de GitHub.</p>
+<hr />
+<h2 id="4-clonar-tu-repositorio">4. Clonar tu repositorio<a class="headerlink" href="#4-clonar-tu-repositorio" title="Permanent link">&para;</a></h2>
+<p>Copia la URL de tu repositorio y clónalo en tu ordenador:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>URL_DE_TU_REPOSITORIO
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>python-intro-entregas-nombre-apellido
+</code></pre></div>
+<p>Abre esa carpeta con Visual Studio Code.</p>
+<hr />
+<h2 id="5-estructura-esperada-del-repositorio">5. Estructura esperada del repositorio<a class="headerlink" href="#5-estructura-esperada-del-repositorio" title="Permanent link">&para;</a></h2>
+<p>Tu repositorio tendrá una estructura similar a esta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python-intro-entregas-ana-garcia/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├── README.md
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├── PROGRESO.md
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>├── unidades/
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│   ├── u01-introduccion-python/
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│   │   ├── README.md
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>│   │   ├── ejercicios/
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>│   │   │   ├── practicar/
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>│   │   │   └── entregar/
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>│   │   └── reflexion.md
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>│   ├── u02-objetos-cadenas/
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>│   │   ├── README.md
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>│   │   ├── ejercicios/
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>│   │   │   ├── practicar/
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>│   │   │   └── entregar/
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>│   │   └── reflexion.md
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>│   ├── u03-control-flujo-sysadmin/
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>│   │   ├── README.md
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>│   │   ├── ejercicios/
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>│   │   │   ├── practicar/
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>│   │   │   └── entregar/
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>│   │   └── reflexion.md
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>│   ├── u04-poo-ampliacion/
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>│   │   ├── README.md
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>│   │   ├── ejercicios/
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>│   │   │   ├── practicar/
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>│   │   │   └── entregar/
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>│   │   └── reflexion.md
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>│   ├── u05-estructuras-datos/
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>│   │   ├── README.md
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>│   │   ├── ejercicios/
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>│   │   │   ├── practicar/
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>│   │   │   └── entregar/
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>│   │   └── reflexion.md
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>│   └── u06-funciones-ficheros/
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>│       ├── README.md
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>│       ├── ejercicios/
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>│       │   ├── practicar/
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>│       │   └── entregar/
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>│       └── reflexion.md
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>└── .github/
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    └── workflows/
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>        └── tests.yml
+</code></pre></div>
+<p>Cada unidad tendrá su propia carpeta. Dentro de <code>ejercicios/</code> separarás los ejercicios de <code>practicar</code> y los de <code>entregar</code>. No mezcles ejercicios de unidades distintas ni de tipos distintos.</p>
+<p>Por ejemplo, en la unidad 1 trabajarás en una de estas dos carpetas según el tipo de ejercicio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>unidades/u01-introduccion-python/ejercicios/practicar/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>unidades/u01-introduccion-python/ejercicios/entregar/
+</code></pre></div>
+<hr />
+<h2 id="6-forma-de-trabajo-recomendada">6. Forma de trabajo recomendada<a class="headerlink" href="#6-forma-de-trabajo-recomendada" title="Permanent link">&para;</a></h2>
+<p>Antes de empezar a trabajar en un bloque de ejercicios, asegúrate de estar en la rama principal y tener el repositorio actualizado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Después, crea una rama nueva según el tipo de ejercicios que vayas a hacer:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>u01-introduccion-python-practicar
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># o</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>u01-introduccion-python-entregar
+</code></pre></div>
+<p>Trabaja en la carpeta correspondiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>unidades/u01-introduccion-python/ejercicios/practicar/
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a># o
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>unidades/u01-introduccion-python/ejercicios/entregar/
+</code></pre></div>
+<hr />
+<h2 id="7-hacer-commits-frecuentes">7. Hacer commits frecuentes<a class="headerlink" href="#7-hacer-commits-frecuentes" title="Permanent link">&para;</a></h2>
+<p>No subas todo el trabajo de golpe al final.</p>
+<p>Haz commits pequeños cada vez que completes una parte:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>status
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Completa ejercicio 1 de la unidad 1"</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>u01-introduccion-python-practicar
+</code></pre></div>
+<p>Ejemplos de buenos mensajes de commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Completa ejercicio 1 de practicar de la unidad 1
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Corrige entregable 1 de cadenas
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Añade pruebas manuales del bloque de glob
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Completa reflexión de la unidad 1
+</code></pre></div>
+<p>Ejemplos de malos mensajes de commit:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cosas
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>final
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>ejercicios
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>cambios
+</code></pre></div>
+<p>Un historial de commits razonable forma parte del trabajo. No se valorará igual una entrega construida poco a poco que una entrega subida completa en un único commit final.</p>
+<hr />
+<h2 id="8-abrir-una-pull-request">8. Abrir una Pull Request<a class="headerlink" href="#8-abrir-una-pull-request" title="Permanent link">&para;</a></h2>
+<p>Cuando termines un bloque de ejercicios de practicar o entregar:</p>
+<ol>
+<li>Entra en GitHub.</li>
+<li>Abre una <strong>Pull Request</strong> desde tu rama hacia <code>main</code>.</li>
+<li>En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor.</li>
+<li>En la descripción indica qué ejercicios has completado y si esa rama corresponde a <code>practicar</code> o a <code>entregar</code>.</li>
+<li>Indica si has usado IA y para qué.</li>
+<li>No hagas merge hasta que el profesor lo indique.</li>
+</ol>
+<p>La Pull Request permite al profesor ver los cambios realizados, revisar el código y dejar comentarios si es necesario.</p>
+<p>Mientras la Pull Request esté abierta, el profesor podrá revisarla y pedir correcciones. Si eso ocurre, debes seguir trabajando en la misma rama, hacer nuevos commits y subirlos con <code>git push</code>; la Pull Request se actualizará sola. No la cierres ni hagas merge por tu cuenta salvo que el profesor te lo indique.</p>
+<p>Si no tienes claro cómo abrirla exactamente o cuándo reutilizar una ya abierta, consulta <a href="../git-github-entregas/#57-abre-o-actualiza-una-pull-request">Tutorial previo: Git y GitHub para tu repositorio de entregas</a>.</p>
+<hr />
+<h2 id="9-completar-la-reflexion-de-cada-unidad">9. Completar la reflexión de cada unidad<a class="headerlink" href="#9-completar-la-reflexion-de-cada-unidad" title="Permanent link">&para;</a></h2>
+<p>Cada unidad tendrá un archivo llamado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>reflexion.md
+</code></pre></div>
+<p>Debes completarlo antes de entregar.</p>
+<p>En ese archivo indicarás:</p>
+<ul>
+<li>qué ejercicios has hecho;</li>
+<li>qué dificultades has tenido;</li>
+<li>cómo has probado tus programas;</li>
+<li>si has usado IA;</li>
+<li>para qué la has usado;</li>
+<li>qué parte del código sabes explicar mejor;</li>
+<li>qué parte te ha costado más.</li>
+</ul>
+<p>Ejemplo de reflexión breve:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>He completado los ejercicios 1, 2, 3 y 4 de la unidad.
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>La principal dificultad ha sido entender que input() devuelve texto y que, para hacer operaciones matemáticas, necesitaba convertir ese texto con int() o float().
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>He probado los programas con varios valores distintos para comprobar que funcionaban correctamente.
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>He usado IA para que me explicara un error de conversión de tipos. Después he corregido el código y he comprobado que funcionaba.
+</code></pre></div>
+<hr />
+<h2 id="10-normas-sobre-el-uso-de-ia">10. Normas sobre el uso de IA<a class="headerlink" href="#10-normas-sobre-el-uso-de-ia" title="Permanent link">&para;</a></h2>
+<p>Puedes usar IA como apoyo para aprender, pero no para sustituir tu trabajo.</p>
+<p>Puedes usar IA para:</p>
+<ul>
+<li>pedir una explicación;</li>
+<li>entender un error;</li>
+<li>comparar dos formas de resolver algo;</li>
+<li>pedir ejemplos parecidos;</li>
+<li>mejorar comentarios;</li>
+<li>repasar conceptos;</li>
+<li>recibir pistas cuando estés bloqueado.</li>
+</ul>
+<p>No debes usar IA para entregar código que no entiendes.</p>
+<p>Normas obligatorias:</p>
+<ol>
+<li>Debes entender todo el código que entregas.</li>
+<li>Debes poder explicarlo oralmente o por escrito.</li>
+<li>Debes indicar en <code>reflexion.md</code> si has usado IA y para qué.</li>
+<li>No se aceptará una entrega que no puedas modificar o explicar.</li>
+<li>Es obligatorio mantener un historial de commits razonable.</li>
+</ol>
+<p>Ejemplo aceptable:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>He usado IA para entender por qué input() devuelve texto y por qué tenía que usar int().
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Después he corregido mi ejercicio y lo he probado con varias edades.
+</code></pre></div>
+<p>Ejemplo aceptable:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>He usado IA para que me explicara por qué fallaba un input numérico.
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Después he adaptado la solución y he probado el programa con tres casos distintos.
+</code></pre></div>
+<p>Ejemplo no aceptable:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Le he pedido a la IA que hiciera todos los ejercicios y he copiado el código.
+</code></pre></div>
+<hr />
+<h2 id="11-defensa-del-trabajo">11. Defensa del trabajo<a class="headerlink" href="#11-defensa-del-trabajo" title="Permanent link">&para;</a></h2>
+<p>El profesor podrá pedirte en cualquier momento que expliques tu código, que modifiques una parte o que resuelvas una variante sencilla.</p>
+<p>Una entrega no se considera válida si no puedes explicar razonablemente lo que has subido.</p>
+<p>Por ejemplo, el profesor podrá pedirte que:</p>
+<ul>
+<li>expliques qué hace una variable concreta;</li>
+<li>cambies un mensaje mostrado por pantalla;</li>
+<li>añadas una comprobación adicional;</li>
+<li>modifiques un cálculo;</li>
+<li>corrijas un error;</li>
+<li>adaptes tu solución a un caso parecido.</li>
+</ul>
+<hr />
+<h2 id="12-actualizar-el-repositorio-de-apuntes">12. Actualizar el repositorio de apuntes<a class="headerlink" href="#12-actualizar-el-repositorio-de-apuntes" title="Permanent link">&para;</a></h2>
+<p>El repositorio de apuntes es distinto de tu repositorio de entregas.</p>
+<p>Para actualizar los apuntes, entra en la carpeta del repositorio de apuntes y ejecuta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>pull
+</code></pre></div>
+<p>Recuerda:</p>
+<ul>
+<li>El repositorio de apuntes sirve para consultar teoría, ejercicios y soluciones publicadas.</li>
+<li>Tu repositorio privado sirve para entregar tu trabajo.</li>
+<li>No entregues ejercicios modificando el repositorio de apuntes.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
