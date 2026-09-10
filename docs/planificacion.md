@@ -82,16 +82,16 @@ Las tutorías serán normalmente online los lunes por la tarde, en el horario ha
 
 | Fecha | Tipo | Rama | Entrega prevista |
 |---|---|---|---|
-| 20/09 | Seguimiento de practicar | `u01-introduccion-python-practicar` | Entorno preparado, primer programa, ejecuciones desde terminal y ejercicios iniciales sobre variables y tipos. |
-| 27/09 | Entrega de practicar | `u01-introduccion-python-practicar` | Ejercicios de entrada/salida, conversiones y operadores resueltos y comprobados. |
-| 04/10 | Seguimiento de entregar | `u01-introduccion-python-entregar` | Primeros ejercicios evaluables; deben verse decisiones de tipo, conversiones y pruebas de casos normales y erróneos. |
-| 11/10 | Entrega de entregar | `u01-introduccion-python-entregar` | Bloque evaluable completo, `reflexion.md` actualizado y Pull Request lista para revisión. |
+| 20/09 | Seguimiento de practicar | `u01-introduccion-python-practicar` | Entorno preparado, primeros ejercicios para practicar hechos. |
+| 27/09 | Entrega de practicar | `u01-introduccion-python-practicar` | Ejercicios para practicar resueltos y comprobados. |
+| 04/10 | Seguimiento de entregar | `u01-introduccion-python-entregar` | Primeros ejercicios para entregar resueltos. |
+| 11/10 | Entrega de entregar | `u01-introduccion-python-entregar` | Bloque entregar completo, `reflexion.md` actualizado y Pull Request lista para revisión. |
 
 ### UT2 - Objetos predefinidos y cadenas de texto
 
 | Fecha | Tipo | Rama | Entrega prevista |
 |---|---|---|---|
-| 18/10 | Entrega de unidad | `u02-objetos-cadenas-practicar` y `u02-objetos-cadenas-entregar` | Ejercicios de métodos, indexación, cortes, formato y validación básica de cadenas. Entrega ambos bloques con su estado real y reflexión de unidad. |
+| 18/10 | Entrega de unidad | `u02-objetos-cadenas-practicar` y `u02-objetos-cadenas-entregar` | Entrega de ejercicios de ambos bloques (practicar y entregar) con su estado real y reflexión de unidad. |
 
 ### UT3 - Control de flujo y librerías útiles para sysadmin
 
@@ -101,7 +101,7 @@ Las tutorías serán normalmente online los lunes por la tarde, en el horario ha
 | 01/11 |  Seguimiento de practicar | `u03-control-flujo-sysadmin-practicar` | Ejercicios bucle while. |
 | 08/11 | Entrega de practicar | `u03-control-flujo-sysadmin-practicar` | Ejercicios bucle for. |
 | 15/11 | Seguimiento de entregar | `u03-control-flujo-sysadmin-entregar` | Ejercicios condicionales con enfoque sysadmin |
-| 22/11 | Entrega de entregar | `u03-control-flujo-sysadmin-entregar` | Ejercicios bucles con enfoque sysadmin.  Documenta lo que quede pendiente. Esta entrega cierra el trabajo ordinario antes de la evaluación.|
+| 22/11 | Entrega de entregar | `u03-control-flujo-sysadmin-entregar` | Ejercicios bucles con enfoque sysadmin.  Documenta lo que quede pendiente. |
 
 
 ### UT5 - Estructuras de datos
