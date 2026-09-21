@@ -1,4 +1,4 @@
-# Cadenas de texto, entrada y salida
+# Cadenas de texto, entrada y salida, f-strings
 
 ## Qué vas a aprender
 
@@ -237,6 +237,151 @@ Debes crear una nueva cadena:
 texto = "P" + texto[1:]
 print(texto)  # Python
 ```
+
+## Formatear texto
+
+En muchos programas necesitamos mostrar mensajes que combinan texto y datos almacenados en variables.
+
+Por ejemplo:
+
+```python
+nombre = "Ana"
+edad = 20
+```
+
+Queremos mostrar:
+
+```text
+Ana tiene 20 años
+```
+
+Podríamos escribir directamente:
+
+```python
+print("Ana tiene 20 años")
+```
+
+Pero eso solo funciona para esos valores concretos. Si cambian los datos, tendríamos que modificar el mensaje manualmente.
+
+Para construir mensajes de forma dinámica utilizamos **f-strings**.
+
+### ¿Qué es una f-string?
+
+Una **f-string** (*formatted string literal*) es una cadena de texto que permite insertar variables y expresiones directamente dentro del texto.
+
+Para crear una f-string se añade una `f` delante de las comillas:
+
+```python
+nombre = "Ana"
+edad = 20
+
+print(f"{nombre} tiene {edad} años")
+```
+
+Salida:
+
+```text
+Ana tiene 20 años
+```
+
+Todo lo que aparece entre llaves `{}` es sustituido por su valor.
+
+Si olvidamos la letra `f`, Python no sustituirá las variables:
+
+```python
+nombre = "Ana"
+edad = 20
+
+print("{nombre} tiene {edad} años")
+```
+
+Salida:
+
+```text
+{nombre} tiene {edad} años
+```
+
+Si queremos mostrar llaves como texto normal, debemos escribirlas dos veces:
+
+```python
+valor = 10
+
+print(f"El diccionario es {{'valor': {valor}}}")
+```
+
+Salida:
+
+```text
+El diccionario es {'valor': 10}
+```
+
+### Ventajas de las f-strings
+
+Son la forma recomendada de crear mensajes porque:
+
+* Son fáciles de leer.
+* Evitan concatenaciones con `+`.
+* Convierten automáticamente los valores a texto.
+* Permiten incluir cálculos y expresiones.
+
+Por ejemplo:
+
+```python
+a = 5
+b = 3
+
+print(f"La suma es {a + b}")
+```
+
+Salida:
+
+```text
+La suma es 8
+```
+
+### Formatear valores
+
+Las f-strings permiten controlar cómo se muestran algunos datos.
+
+Un caso muy habitual es limitar el número de decimales:
+
+```python
+precio = 19.995
+
+print(f"Precio final: {precio:.2f} €")
+```
+
+Salida:
+
+```text
+Precio final: 20.00 €
+```
+
+El formato `.2f` indica que queremos mostrar el número con **dos decimales**.
+
+Otro ejemplo:
+
+```python
+numero = 3.14159265
+
+print(f"{numero:.3f}")
+```
+
+Salida:
+
+```text
+3.142
+```
+
+### Resumen
+
+* Una f-string comienza con `f`.
+* Las expresiones se escriben entre llaves `{}`.
+* Permiten combinar texto y variables de forma sencilla.
+* También pueden incluir cálculos.
+* Facilitan el formateo de números, especialmente los decimales.
+
+
 
 ## Antes del cuestionario comprueba que sabes...
 
