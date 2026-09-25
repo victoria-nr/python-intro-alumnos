@@ -8,6 +8,13 @@ A continuación se muestra una planificación temporal de las Unidades de Trabaj
 
 ![Planificación Introducción a la programación](assets/images/planificacion_ip.png)
 
+!!! danger "🚨 Cambio en la planificación del Tema 1 y Tema 2"
+    - El **Tema 1** finalizará una semana antes (el 4/10)
+    - El **Tema 2** comenzará una semana antes (el 5/10), teniendo el Tema 2 un total de dos semanas, en lugar de una.
+    - Revisa las fechas de las entregas correspondientes.
+
+    
+
 ## 2. Reglas de trabajo durante el curso
 
 - La fecha ordinaria de entrega será el domingo por la noche.
@@ -65,7 +72,7 @@ Las tutorías serán normalmente online los lunes por la tarde, en el horario ha
 | Fecha | Foco de la sesión | Qué conviene traer preparado |
 |---|---|---|
 | 14/09 | 1) Arranque, entorno, repositorio, ramas y Pull Requests <br> 2) Inicio UT1 | Guía de entregas leída y cuenta de GitHub creada, si es posible, con el entorno de trabajo y el repositorio de entregas montado. |
-| 28/09 | 1) UT1: variables, tipos, entrada/salida y lectura de errores <br> 2) Resolución dudas | Primeros ejercicios de `practicar` intentados. Traer dudas ejercicios concretos. |
+| 28/09 | 1) UT1: variables, tipos, entrada/salida y lectura de errores | UT1: Primeros ejercicios de `entregar` intentados. Traer dudas ejercicios concretos. |
 | 14/10 | 1) UT2: objetos predefinidos y cadenas. <br> 2) Resolución dudas | Leída la teoría e intentados ejercicios para `practicar`. Traer dudas ejercicios concretos. |
 | 26/10 | 1) UT3: condicionales, bucles y trazado manual. <br>  2) Resolución dudas | Ejercicios para `practicar` `if` hechos. Ejercicios para `practicar` de `while` intentados. Traer algún ejercicio con `if` o `while` que haya dado problemas. |
 | 09/11 | 1) UT3: funciones de librerías y ejercicio de ejemplo <br>  2) Resolución dudas | Ejercicios para `practicar` terminados.  |
@@ -84,14 +91,17 @@ Las tutorías serán normalmente online los lunes por la tarde, en el horario ha
 |---|---|---|---|
 | 20/09 | Seguimiento de practicar | `u01-introduccion-python-practicar` | Entorno preparado, primeros ejercicios para practicar hechos. |
 | 27/09 | Entrega de practicar | `u01-introduccion-python-practicar` | Ejercicios para practicar resueltos y comprobados. |
-| 04/10 | Seguimiento de entregar | `u01-introduccion-python-entregar` | Primeros ejercicios para entregar resueltos. |
-| 11/10 | Entrega de entregar | `u01-introduccion-python-entregar` | Bloque entregar completo, `reflexion.md` actualizado y Pull Request lista para revisión. |
+| 04/10 |  Entrega de entregar | `u01-introduccion-python-entregar` | Bloque entregar completo, `reflexion.md` actualizado y Pull Request lista para revisión. |
+
+Seguimiento de entregar | `u01-introduccion-python-entregar` | Primeros ejercicios para entregar resueltos. |
+
 
 ### UT2 - Objetos predefinidos y cadenas de texto
 
 | Fecha | Tipo | Rama | Entrega prevista |
 |---|---|---|---|
-| 18/10 | Entrega de unidad | `u02-objetos-cadenas-practicar` y `u02-objetos-cadenas-entregar` | Entrega de ejercicios de ambos bloques (practicar y entregar) con su estado real y reflexión de unidad. |
+| 11/10 | Entrega de practicar | `u02-objetos-cadenas-practicar` | Entrega de ejercicios para practicar |
+| 18/10 | Entrega de entregar |  `u02-objetos-cadenas-entregar` | Entrega de ejercicios entregar con su estado real y reflexión de unidad. |
 
 ### UT3 - Control de flujo y librerías útiles para sysadmin
 
