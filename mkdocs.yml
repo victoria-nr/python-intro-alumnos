@@ -64,3 +64,14 @@ nav:
     - Soluciones:
       - Índice: unidades/u01-introduccion-python/soluciones/index.md
       - Practicar: unidades/u01-introduccion-python/soluciones/practicar/index.md
+      - Entregar: unidades/u01-introduccion-python/soluciones/entregar/index.md
+  - UT2 - Objetos predefinidos y cadenas de texto:
+    - Presentación: unidades/u02-objetos-cadenas/index.md
+    - Alineación RA: unidades/u02-objetos-cadenas/alineacion-ra.md
+    - Teoría:
+      - Objetos predefinidos, funciones y métodos: unidades/u02-objetos-cadenas/teoria/01-objetos-predefinidos.md
+      - Métodos habituales de cadenas: unidades/u02-objetos-cadenas/teoria/02-metodos-cadenas.md
+      - Formateo de cadenas, f-strings y Unicode: unidades/u02-objetos-cadenas/teoria/03-formateo-fstrings-unicode.md
+    - Ejercicios:
+      - Índice: unidades/u02-objetos-cadenas/ejercicios/index.md
+      - Practicar: unidades/u02-objetos-cadenas/ejercicios/practicar/index.md
