@@ -73,7 +73,7 @@ Las tutorías serán normalmente online los lunes por la tarde, en el horario ha
 |---|---|---|
 | 14/09 | 1) Arranque, entorno, repositorio, ramas y Pull Requests <br> 2) Inicio UT1 | Guía de entregas leída y cuenta de GitHub creada, si es posible, con el entorno de trabajo y el repositorio de entregas montado. |
 | 28/09 | 1) UT1: variables, tipos, entrada/salida y lectura de errores | UT1: Primeros ejercicios de `entregar` intentados. Traer dudas ejercicios concretos. |
-| 14/10 | 1) UT2: objetos predefinidos y cadenas. <br> 2) Resolución dudas | Leída la teoría e intentados ejercicios para `practicar`. Traer dudas ejercicios concretos. |
+| 14/10 | 1) UT2: objetos predefinidos y cadenas. Subcadenas con find() <br> 2) Resolución dudas | Leída la teoría e intentados ejercicios para `practicar` y `entregar`. Traer dudas ejercicios concretos. |
 | 26/10 | 1) UT3: condicionales, bucles y trazado manual. <br>  2) Resolución dudas | Ejercicios para `practicar` `if` hechos. Ejercicios para `practicar` de `while` intentados. Traer algún ejercicio con `if` o `while` que haya dado problemas. |
 | 09/11 | 1) UT3: funciones de librerías y ejercicio de ejemplo <br>  2) Resolución dudas | Ejercicios para `practicar` terminados.  |
 | 16/11 | Cierre de UT3 y dudas antes de la evaluación | Ejercicios para `entregar` casi terminados. Dudas concretas de ejercicios. |
