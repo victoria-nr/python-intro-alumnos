@@ -2,289 +2,182 @@
 
 Si nunca has usado Git ni GitHub, lee esta guía antes de empezar con [Entregas del curso](entregas.md).
 
-El objetivo no es que te conviertas en experto en Git, sino que seas capaz de:
+El objetivo no es que te conviertas en experto en Git, sino que aprendas a guardar tu trabajo, trabajar en ramas separadas y entregar cada bloque para que el profesor lo revise.
 
-- crear tu repositorio privado desde una plantilla;
-- mantener una copia en tu ordenador;
-- guardar tu trabajo con commits pequeños;
-- subirlo a GitHub sin perder cambios;
-- abrir Pull Requests para que el profesor pueda revisarlo.
+!!! info "Qué hacer después"
+    Cuando termines esta guía, consulta [Entregas del curso](entregas.md), donde se explican las normas que debes seguir durante el curso.
 
-!!! info "Qué leer después"
-    Cuando termines esta guía, continúa con [Entregas del curso](entregas.md), donde se explican las normas concretas del trabajo durante el curso.
+!!! warning "Tres ideas fundamentales"
+    - `commit`: guarda una versión en tu ordenador.
+    - `push`: sube tus commits a GitHub.
+    - **Cada bloque se trabaja en una rama nueva creada desde `main` y se entrega mediante una Pull Request dirigida a `main`.**
 
-!!! warning "Idea importante"
-    Git no guarda automáticamente tus cambios en el historial. Hasta que no haces `commit`, el trabajo solo está en tus archivos locales. Hasta que no haces `push`, GitHub no ve esos cambios.
+## 1. Git y GitHub: lo mínimo que necesitas
 
-## 1. Qué es Git y qué es GitHub
+- **Git** registra los cambios que haces en los archivos.
+- **GitHub** aloja una copia de tu repositorio y permite que el profesor revise tu trabajo.
+- **`main`** es la rama principal. Contiene el trabajo que ya se ha integrado.
+- **Una rama** es una línea de trabajo separada para un bloque concreto.
+- **Un commit** guarda un conjunto de cambios con un mensaje.
+- **`push`** sube tus commits a GitHub.
+- **`pull`** descarga e integra en tu rama local los cambios que ya están en GitHub.
+- **Una Pull Request (PR)** solicita que se revise una rama antes de incorporar sus cambios a `main`.
+- **Merge** incorpora los cambios de una rama a `main`.
 
-- **Git** es la herramienta que registra cambios en tus archivos.
-- **GitHub** es la plataforma web donde alojarás tu repositorio privado y compartirás ese trabajo con el profesor.
+No necesitas memorizar más conceptos para seguir el flujo de trabajo del curso.
 
-Piensa en ello así:
+## 2. Preparación inicial: se hace una sola vez
 
-- Git trabaja sobre todo en tu ordenador.
-- GitHub muestra una copia remota de tu repositorio en Internet.
-
-## 2. Vocabulario mínimo que necesitas
-
-| Concepto | Significado |
-|---|---|
-| Repositorio | Carpeta de trabajo controlada por Git. Guarda archivos e historial de cambios. |
-| Repositorio remoto | La copia del repositorio en GitHub. |
-| Clonar | Descargar en tu ordenador una copia completa del repositorio remoto. |
-| `main` | Rama principal del repositorio. |
-| Rama | Línea de trabajo separada dentro del mismo repositorio. |
-| Commit | Punto de guardado con mensaje. Explica qué has cambiado. |
-| `push` | Subir commits desde tu ordenador a GitHub. |
-| `pull` | Traer cambios desde GitHub a tu ordenador. |
-| Pull Request | Solicitud para revisar una rama antes de integrarla en `main`. |
-| Repositorio privado | Repositorio que no puede ver cualquiera. Solo acceden las personas invitadas. |
-| Colaborador | Persona con permiso para entrar en tu repositorio privado. |
-
-No necesitas memorizar términos más avanzados para seguir el curso.
-
-## 3. Preparación inicial en tu ordenador
-
-Si todavía no has instalado Git, revisa primero [Instalación](instalacion.md).
-
-
-## 4. Qué harás una sola vez al principio del curso
-
-### 4.1. Crear el repositorio desde la plantilla
+### 2.1. Crear tu repositorio desde la plantilla
 
 1. Entra en el repositorio plantilla indicado por el profesor.
-2. Pulsa **Use this template**.
-3. Elige **Create a new repository**.
-4. Asigna un nombre con este patrón:
+2. Pulsa **Use this template** y después **Create a new repository**.
+3. Asigna el nombre que indique el profesor, por ejemplo:
 
 ```text
 python-intro-entregas-nombre-apellido
 ```
 
-5. Marca el repositorio como **Private**.
-6. Crea el repositorio.
+4. Marca el repositorio como **Private**.
+5. Crea el repositorio.
 
-No uses **Fork** salvo que el profesor te lo pida expresamente. En este curso el flujo previsto es crear un repositorio nuevo a partir de la plantilla.
+No uses **Fork** salvo que el profesor te lo pida expresamente.
 
-### 4.2. Invitar al profesor como colaborador
+### 2.2. Invitar al profesor como colaborador
 
-1. Entra en tu repositorio.
-2. Ve a **Settings**.
-3. Entra en **Collaborators** o **Collaborators and teams**.
-4. Pulsa **Add people**.
-5. Busca el usuario de GitHub del profesor.
-6. Envía la invitación.
+1. Entra en tu repositorio de GitHub.
+2. Ve a **Settings** y después a **Collaborators** o **Collaborators and teams**.
+3. Pulsa **Add people**, busca el usuario del profesor y envía la invitación.
 
-Mientras el profesor no tenga acceso, no podrá revisar tu trabajo en un repositorio privado.
-
-### 4.3. Clonar el repositorio en tu ordenador
-
-Clonar significa descargar una copia completa del repositorio para trabajar localmente.
+### 2.3. Clonar el repositorio en tu ordenador
 
 Esto se hace una sola vez:
 
 ```bash
 git clone URL_DE_TU_REPOSITORIO
-cd python-intro-entregas-nombre-apellido
+cd NOMBRE_DE_TU_REPOSITORIO
 ```
 
-Después, abre esa carpeta con Visual Studio Code.
+Abre esa carpeta con Visual Studio Code. A partir de ahora, trabaja siempre dentro de esa carpeta.
 
-## 5. Flujo de trabajo habitual durante el curso
+## 3. El flujo de trabajo para cada bloque
 
-Este será el ciclo que repetirás muchas veces.
+**Cada bloque tiene su propia rama. Todas las ramas de bloques nuevos se crean desde `main`, nunca desde otra rama de trabajo.**
 
-### 5.1. Antes de empezar, actualiza `main`
+### Paso 1. Comprueba el estado del repositorio
 
-```bash
-git checkout main
-git pull
-```
-
-Con esto te aseguras de partir de la rama principal actualizada.
-
-### 5.2. Crea una rama para el bloque en el que vas a trabajar
-
-Ejemplo para ejercicios de practicar de la unidad 1:
-
-```bash
-git checkout -b u01-introduccion-python-practicar
-```
-
-Ejemplo para ejercicios de entregar:
-
-```bash
-git checkout -b u01-introduccion-python-entregar
-```
-
-Si esa rama ya existe porque vas a continuar trabajo anterior, no la crees otra vez. Entra directamente en ella:
-
-```bash
-git checkout u01-introduccion-python-practicar
-```
-
-### 5.3. Trabaja en la carpeta correcta
-
-Ejemplo:
-
-```text
-unidades/u01-introduccion-python/ejercicios/practicar/
-```
-
-o:
-
-```text
-unidades/u01-introduccion-python/ejercicios/entregar/
-```
-
-Guarda los archivos normalmente desde VS Code.
-
-### 5.4. Revisa qué ha cambiado
+Antes de cambiar de rama o empezar un bloque:
 
 ```bash
 git status
 ```
 
-Este comando te dice:
+Si tienes cambios sin guardar en un commit, no cambies de rama sin comprobar primero qué son. Si pertenecen al bloque en el que estás trabajando, haz commit y push antes de continuar.
 
-- en qué rama estás;
-- qué archivos han cambiado;
-- qué archivos están preparados para commit;
-- si te falta hacer `push`.
+### Paso 2. Actualiza `main`
 
-Si solo aprendes un comando para orientarte cuando algo te confunde, que sea `git status`.
+```bash
+git switch main
+git pull
+```
 
-### 5.5. Haz un commit con un mensaje claro
+Así partes de la versión más reciente de `main` que tienes en GitHub.
 
-Cuando completes una parte pequeña del trabajo:
+### Paso 3. Crea una rama nueva para el bloque
+
+Ejemplo para los ejercicios de practicar de la unidad 1:
+
+```bash
+git switch -c u01-introduccion-python-practicar
+```
+
+Ejemplo para los ejercicios de entregar:
+
+```bash
+git switch -c u01-introduccion-python-entregar
+```
+
+Usa el nombre que indique el profesor. **No crees una rama nueva desde la rama en la que estabas trabajando: vuelve primero a `main`.**
+
+Si ya existe una rama para el mismo bloque porque la PR sigue abierta o el profesor te ha pedido corregirla, no crees otra: vuelve a esa rama y continúa allí.
+
+### Paso 4. Trabaja en los archivos del bloque
+
+Guarda los archivos en la carpeta de la unidad y del bloque que corresponda. No mezcles ejercicios de otros bloques.
+
+Comprueba de vez en cuando dónde estás:
+
+```bash
+git status
+```
+
+La primera línea indica la rama actual.
+
+### Paso 5. Haz commits frecuentes
+
+Cuando completes una parte del trabajo:
 
 ```bash
 git add .
-git commit -m "Completa ejercicio 1 de practicar de la unidad 1"
+git commit -m "Completa ejercicio 1 del bloque practicar de la unidad 1"
 ```
 
-Si prefieres ser más preciso, puedes añadir solo una carpeta concreta:
+Usa mensajes que expliquen el cambio. Evita mensajes como `cosas`, `final` o `cambios`.
+
+### Paso 6. Sube la rama a GitHub
+
+La primera vez que subas esa rama, usa su nombre:
 
 ```bash
-git add unidades/u01-introduccion-python/ejercicios/practicar/
+git push -u origin NOMBRE_DE_LA_RAMA
 ```
 
-Haz commits pequeños y frecuentes. Un commit debe representar un avance reconocible.
-
-### 5.6. Sube la rama a GitHub
-
-La primera vez que subes una rama:
-
-```bash
-git push -u origin u01-introduccion-python-practicar
-```
-
-Después, normalmente bastará con:
+En los siguientes envíos de esa misma rama, normalmente basta con:
 
 ```bash
 git push
 ```
 
-### 5.7. Abre o actualiza una Pull Request
+Recuerda: `commit` guarda en tu ordenador; `push` sube los cambios a GitHub.
 
-Una Pull Request es una solicitud de revisión: sirve para decir "Profesor, revisa esta rama antes de incorporarla a `main`".
+### Paso 7. Abre una Pull Request
 
-#### Cuándo debes abrirla
+Cuando termines el bloque:
 
-Abre una Pull Request cuando hayas terminado un bloque de ejercicios de `practicar` o de `entregar`, o cuando quieras dejar ese bloque preparado para revisión aunque todavía necesite alguna corrección.
+1. Entra en tu repositorio de GitHub.
+2. Pulsa **Compare & pull request** si aparece. Si no aparece, ve a **Pull requests → New pull request**.
+3. Comprueba que la rama base o destino sea **`main`** y que la rama de origen sea la del bloque que acabas de terminar.
+4. Revisa **Files changed**: deben aparecer únicamente los cambios que quieres entregar en ese bloque.
+5. Añade al profesor como **Reviewer**.
+6. Escribe un título y una descripción breves y pulsa **Create pull request**.
+7. No hagas merge por tu cuenta: espera a que el profesor te lo indique.
 
-La norma general es simple:
+No abras una PR nueva por cada commit. Abre una PR por bloque y rama.
 
-- una rama para un bloque de trabajo;
-- una Pull Request para esa rama.
+## 4. ¿Tengo que esperar a que el profesor revise la PR para empezar otro bloque?
 
-No hace falta abrir una Pull Request nueva por cada commit.
+**No. Puedes empezar otro bloque mientras una o varias PR están pendientes de revisión.** No esperes a que el profesor las revise.
 
-#### Qué debes hacer antes de abrirla
+Para empezar el nuevo bloque:
 
-Antes de entrar en GitHub, comprueba que:
-
-- estás en la rama correcta;
-- has guardado tus archivos;
-- has hecho al menos un `commit`;
-- has subido esa rama con `git push`.
-
-Si no haces `push`, GitHub no verá tus cambios.
-
-#### Cómo abrirla en GitHub
-
-1. Entra en tu repositorio en GitHub.
-2. Si aparece el aviso **Compare & pull request**, púlsalo.
-3. Si no aparece, entra en **Pull requests** y pulsa **New pull request**.
-4. En la Pull Request → panel derecho → Reviewers → selecciona el usuario de tu profesor. Este paso es muy importante.
-5. Revisa que la rama base sea `main` y que la rama de comparación sea tu rama, por ejemplo `u01-introduccion-python-practicar`.
-6. Comprueba que en la vista previa aparecen los archivos correctos.
-7. Pulsa **Create pull request**.
-
-#### Qué escribir en la Pull Request
-
-El título y la descripción deben dejar claro qué estás entregando.
-
-Ejemplo de título:
-
-```text
-UT1 practicar: ejercicios 1 a 4
+```bash
+git switch main
+git pull
+git switch -c NOMBRE_DEL_NUEVO_BLOQUE
 ```
 
-Ejemplo de descripción:
+La nueva rama parte de lo que haya en `main` en ese momento. Si una PR anterior todavía no se ha fusionado, sus cambios aún no estarán en `main`; no intentes copiar manualmente esos cambios a la nueva rama.
 
-```md
-Bloque: practicar
-Unidad: UT1
-Ejercicios completados: 1, 2, 3 y 4
-Estado: listos para revisión
-Uso de IA: sí, para entender un error con input() y conversión de tipos
-Observaciones: he probado los programas con varios datos de entrada
-```
+Organiza los bloques en archivos o carpetas diferentes siempre que sea posible. Si dos ramas modifican el mismo archivo, puede que más adelante haya que resolver un conflicto. Si GitHub informa de un conflicto que no sabes resolver, no improvises: consulta al profesor.
 
-No hace falta escribir mucho, pero sí lo suficiente para que el profesor entienda qué está revisando.
+## 5. ¿Qué hago si el profesor pide cambios en una PR?
 
-#### Qué pasa después de abrirla
+Si el profesor solicita cambios en una PR que sigue abierta:
 
-Cuando abres la Pull Request empieza la revisión:
-
-1. El profesor entra en la Pull Request y revisa archivos, commits y comentarios.
-2. Si hace falta, te pedirá correcciones.
-3. Tú corriges en la misma rama, haces `commit` y `push`.
-4. La misma Pull Request se actualiza sola.
-5. Cuando el trabajo ya está correcto, el profesor decide si se da por válido y qué hacer después.
-
-Mientras la entrega siga en revisión, la Pull Request debe quedarse abierta.
-
-#### Qué hacer cuando el profesor solicita cambios (Request changes)
-
-Si el profesor revisa tu Pull Request y selecciona **Request changes**, significa que la entrega necesita algunas correcciones antes de darse por válida.
-
-No debes crear una nueva Pull Request. Debes seguir trabajando sobre la misma.
-
-##### 1. Lee los comentarios del profesor
-
-En GitHub, entra en tu Pull Request y revisa los comentarios recibidos.
-
-Los comentarios pueden aparecer:
-
-- En la pestaña **Conversation**.
-- Sobre líneas concretas de código en la pestaña **Files changed**.
-
-Lee todos los comentarios antes de empezar a modificar el código.
-
-##### 2. Corrige el código en tu ordenador
-
-Las correcciones deben realizarse normalmente en tu copia local del proyecto utilizando tu editor habitual (VS Code, IntelliJ, Eclipse, etc.).
-
-No es necesario modificar el código desde la web de GitHub.
-
-Realiza los cambios solicitados y comprueba que el programa sigue funcionando correctamente.
-
-##### 3. Haz commit y push
-
-Cuando hayas terminado las correcciones:
+1. Lee los comentarios de la revisión.
+2. Cambia a la **misma rama** de esa PR.
+3. Corrige los archivos y comprueba que funcionan.
+4. Haz commit y push a esa misma rama:
 
 ```bash
 git add .
@@ -292,221 +185,124 @@ git commit -m "Corrige comentarios de la revisión"
 git push
 ```
 
-Debes hacer el `push` a la misma rama que utilizaste para crear la Pull Request.
+La PR se actualizará automáticamente. No crees otra PR para el mismo bloque ni cierres la que ya está abierta.
 
-##### 4. La Pull Request se actualiza automáticamente
+Puedes tener abierta la PR de un bloque y trabajar en otra rama para un bloque posterior. Antes de cambiar entre ellas, comprueba con `git status` que sabes qué cambios tienes y en qué rama estás.
 
-No necesitas crear una nueva Pull Request.
+## 6. ¿Qué hago si quiero corregir un ejercicio que ya se fusionó en `main`?
 
-Cuando haces `push`, GitHub añade automáticamente los nuevos commits a la Pull Request que ya estaba abierta.
+Si el ejercicio ya estaba en una PR fusionada y después quieres corregirlo —por ejemplo, porque has visto la solución publicada por el profesor—, en este curso harás la corrección **directamente en `main`**. No recuperes la rama antigua ni abras otra PR solo para esa corrección.
 
-El profesor podrá revisar los cambios realizados.
-
-##### 5. Responde a los comentarios
-
-Después de subir los cambios, vuelve a la Pull Request y responde a los comentarios indicando qué has corregido.
-
-Por ejemplo:
-
-> Corregido en el último commit.
-
-o
-
-> He modificado el método para controlar el caso indicado en la revisión.
-
-Esto ayuda al profesor a localizar rápidamente las correcciones realizadas.
-
-##### 6. Espera una nueva revisión
-
-El profesor volverá a revisar la misma Pull Request.
-
-Puede ocurrir que:
-
-- La entrega quede aprobada.
-- Se soliciten nuevas correcciones.
-
-En este último caso, simplemente repite el mismo proceso: corregir → commit → push → revisión.
-
-> **Importante:** mientras la entrega esté siendo revisada o corregida, la Pull Request debe permanecer abierta. No cierres la Pull Request ni crees una nueva para la misma entrega.
-
-
-#### Qué es un merge y qué significa cerrar una Pull Request
-
-Hacer **merge** significa pasar los cambios de tu rama a `main`, es decir, incorporarlos a la versión principal del repositorio.
-
-Si una Pull Request se hace merge:
-
-- los cambios pasan a `main`;
-- GitHub la marca como completada;
-- normalmente se cierra automáticamente.
-
-Cerrar una Pull Request **sin merge** significa terminar esa revisión sin pasar los cambios a `main`. Eso puede ocurrir, por ejemplo, si la Pull Request se abrió por error, usa la rama equivocada o el profesor solo quería revisar el progreso.
-
-Si se cierra sin merge, tus cambios no desaparecen: siguen en tu rama.
-
-#### Qué debes hacer tú en este curso
-
-La regla práctica es esta:
-
-1. Abre la Pull Request cuando el bloque esté listo para revisión.
-2. Déjala abierta.
-3. Si el profesor pide cambios, corrígelos en la misma rama y haz `push`.
-4. No hagas merge tú mismo, salvo que el profesor lo indique.
-5. No la cierres por tu cuenta, salvo que el profesor te lo diga.
-
-#### Cuándo seguir con la misma Pull Request y cuándo abrir otra
-
-Sigue con la misma Pull Request si sigues trabajando en el mismo bloque y en la misma rama.
-
-Abre una Pull Request nueva si empiezas otro bloque, creas otra rama o cambias de unidad o de tipo de ejercicios.
-
-#### Qué no debes hacer
-
-- No abras una Pull Request desde `main` hacia `main`.
-- No abras varias Pull Requests para la misma rama salvo que te lo pidan.
-- No cierres la Pull Request solo porque luego hayas hecho otro commit.
-
-#### Ejemplo completo
-
-Ana termina los ejercicios 1, 2, 3 y 4 de `practicar` de la UT1 en la rama `u01-introduccion-python-practicar`. Hace `commit`, hace `push` y abre una Pull Request hacia `main`. El profesor la revisa. Si ve errores, deja comentarios; Ana corrige en esa misma rama, hace otro `commit` y otro `push`, y la misma Pull Request se actualiza. Si el trabajo ya es correcto, el profesor la da por válida y, si corresponde, se hace merge. En ese momento GitHub cierra la Pull Request automáticamente.
-
-## 6. Qué harás muchas veces y qué solo harás una vez
-
-Solo una vez al principio:
-
-- crear el repositorio desde la plantilla;
-- invitar al profesor;
-- clonar el repositorio en tu ordenador.
-
-Muchas veces durante el curso:
-
-- `git checkout main`;
-- `git pull`;
-- `git checkout -b ...` o `git checkout ...`;
-- `git status`;
-- `git add ...`;
-- `git commit -m "..."`;
-- `git push`;
-- abrir o actualizar Pull Requests.
-
-## 7. Problemas habituales y qué significan
-
-### 7.1. "nothing to commit, working tree clean"
-
-Significa que Git no ve cambios pendientes.
-
-Puede deberse a una de estas causas:
-
-- no has modificado nada todavía;
-- has olvidado guardar el archivo en VS Code;
-- ya hiciste el commit antes.
-
-### 7.2. "a branch named ... already exists"
-
-Significa que esa rama ya la creaste en otro momento.
-
-En ese caso entra en ella, en lugar de volver a crearla:
+1. Comprueba que los cambios de tu bloque actual están guardados en commits y subidos a GitHub.
+2. Cambia a `main` y actualízala:
 
 ```bash
-git checkout NOMBRE_DE_LA_RAMA
+git status
+git switch main
+git pull
 ```
 
-### 7.3. He hecho commit, pero no veo los cambios en GitHub
+3. Corrige el ejercicio antiguo.
+4. Guarda y sube la corrección:
 
-Lo más probable es que te falte hacer:
+```bash
+git add RUTA_DEL_ARCHIVO
+git commit -m "Corrige ejercicio 3 del bloque entregar de la unidad 1"
+git push
+```
+
+5. Vuelve a la rama del bloque en el que estabas trabajando:
+
+```bash
+git switch NOMBRE_DE_TU_RAMA_ACTUAL
+```
+
+**Importante:** cambiar a `main` no incorpora automáticamente esa corrección a las otras ramas que ya tenías abiertas. Si la corrección afecta a un archivo distinto de los que estás modificando en tu rama actual, normalmente podrás continuar con normalidad. Si afecta al mismo archivo o aparece un conflicto, para y pide ayuda al profesor.
+
+No hagas una corrección directamente en `main` si se trata de cambios solicitados por el profesor en una PR que todavía está abierta. En ese caso, corrige en la rama de esa PR, tal como se explica en el apartado anterior.
+
+## 7. Problemas habituales: qué hacer
+
+### He empezado a trabajar por error en `main`
+
+**Si todavía no has hecho commit**, crea inmediatamente la rama correcta para conservar allí los cambios:
+
+```bash
+git switch -c NOMBRE_DEL_BLOQUE
+```
+
+Después continúa trabajando en esa rama.
+
+**Si ya has hecho commit en `main`**, no crees una rama sin más ni ejecutes comandos para borrar commits. Detente y pide ayuda al profesor. Indica qué comandos has ejecutado y comparte la salida de `git status`.
+
+### He creado la rama desde otra rama de trabajo
+
+Si todavía no has hecho cambios en la rama equivocada, vuelve a `main`, actualízala y crea la rama correctamente. Si ya has trabajado en ella, no borres archivos ni commits al azar: consulta al profesor antes de reorganizarla.
+
+### Git dice que la rama ya existe
+
+No vuelvas a crearla. Si estás continuando el mismo bloque o corrigiendo una PR abierta, entra en esa rama:
+
+```bash
+git switch NOMBRE_DE_LA_RAMA
+```
+
+Si se trata de un bloque nuevo, utiliza un nombre nuevo y crea esa rama desde `main`.
+
+### He hecho commit, pero no veo los cambios en GitHub
+
+Comprueba si has hecho `push`:
 
 ```bash
 git push
 ```
 
-Recuerda: `commit` guarda en tu ordenador; `push` sube a GitHub.
+### GitHub dice que hay conflictos o no permite hacer merge
 
-### 7.4. He empezado a trabajar por error en `main`
+No uses `git push --force`, no borres archivos al azar y no intentes resolverlo sin entender qué ha ocurrido. Ejecuta `git status`, copia el mensaje de error y pide ayuda al profesor.
 
-Si todavía no has hecho commit, puedes crear la rama en ese momento y tus cambios pasarán a ella:
+### No sé en qué rama estoy
 
-```bash
-git checkout -b NOMBRE_DE_LA_RAMA
-```
-
-Haz esto cuanto antes, antes de seguir trabajando.
-
-### 7.5. Git me muestra un conflicto
-
-Un conflicto aparece cuando Git no sabe combinar dos cambios automáticamente.
-
-Si no entiendes lo que ha pasado:
-
-- no uses `git push --force`;
-- no borres archivos al azar;
-- revisa `git status`;
-- pide ayuda al profesor mostrando el mensaje exacto.
-
-## 8. Normas para no romper tu repositorio
-
-- No trabajes los ejercicios en el repositorio público de apuntes.
-- No borres ni renombres carpetas base de unidades si no se te pide.
-- No subas contraseñas, tokens ni datos sensibles.
-- No uses `git push --force` salvo que el profesor te lo indique.
-- No dejes todos los cambios para un único commit final.
-- Mantén el repositorio como **privado**.
-
-## 9. Chuleta mínima de comandos
-
-```bash
-git clone URL
-```
-
-Descarga el repositorio por primera vez.
-
-```bash
-git checkout main
-git pull
-```
-
-Te coloca en la rama principal y la actualiza.
-
-```bash
-git checkout -b nombre-rama
-```
-
-Crea una rama nueva y entra en ella.
+Ejecuta:
 
 ```bash
 git status
 ```
 
-Muestra el estado actual del repositorio.
+Comprueba la rama que aparece antes de modificar archivos o ejecutar otros comandos.
+
+## 8. Normas para no estropear el repositorio
+
+- Mantén privado tu repositorio de entregas.
+- Trabaja en la carpeta de tu repositorio, no en la de los apuntes públicos.
+- Crea una rama nueva desde `main` para cada bloque.
+- Comprueba que cada PR tiene como destino `main` y contiene solo los cambios de ese bloque.
+- No hagas merge de una PR sin autorización del profesor.
+- No uses `git push --force` salvo que el profesor te lo indique.
+- No borres ni renombres las carpetas base sin permiso.
+- No subas contraseñas, tokens ni datos sensibles.
+
+## 9. Chuleta de comandos
 
 ```bash
-git add .
-git commit -m "mensaje claro"
+git status                         # Comprueba estado y rama actual
+git switch main                    # Cambia a main
+git pull                           # Actualiza la rama actual
+git switch -c NOMBRE_DE_LA_RAMA    # Crea una rama nueva y cambia a ella
+git add .                          # Prepara los cambios
+git commit -m "Mensaje claro"      # Guarda los cambios en un commit
+git push -u origin NOMBRE_DE_RAMA  # Publica la rama por primera vez
+git push                           # Sube nuevos commits de la rama actual
 ```
 
-Prepara cambios y crea un commit.
+## 10. Si necesitas ayuda
 
-```bash
-git push -u origin nombre-rama
-```
+No digas solo «Git no funciona». Indica:
 
-Sube la rama por primera vez.
-
-```bash
-git push
-```
-
-Sube nuevos commits de una rama ya conectada con GitHub.
-
-## 10. Qué información debes dar si pides ayuda
-
-Si algo falla, no digas solo "Git no va".
-
-Da siempre estos datos:
-
-- el comando exacto que has ejecutado;
+- qué querías hacer;
+- qué comando has ejecutado;
 - el mensaje de error completo;
 - la salida de `git status`;
-- la rama en la que estabas;
-- qué querías hacer exactamente.
+- en qué rama estabas.
 
-Con eso será mucho más fácil ayudarte sin tocar tu repositorio a ciegas.
+Así el profesor podrá ayudarte sin arriesgar los cambios de tu repositorio.
