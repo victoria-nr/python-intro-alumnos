@@ -74,9 +74,9 @@ Las tutorías serán normalmente online los lunes por la tarde, en el horario ha
 | 14/09 | 1) Arranque, entorno, repositorio, ramas y Pull Requests <br> 2) Inicio UT1 | Guía de entregas leída y cuenta de GitHub creada, si es posible, con el entorno de trabajo y el repositorio de entregas montado. |
 | 28/09 | 1) UT1: variables, tipos, entrada/salida y lectura de errores | UT1: Primeros ejercicios de `entregar` intentados. Traer dudas ejercicios concretos. |
 | 14/10 | 1) UT2: objetos predefinidos y cadenas. Subcadenas con find() <br> 2) Resolución dudas | Leída la teoría e intentados ejercicios para `practicar` y `entregar`. Traer dudas ejercicios concretos. |
-| 26/10 | 1) UT3: condicionales, bucles y trazado manual. <br>  2) Resolución dudas | Ejercicios para `practicar` `if` hechos. Ejercicios para `practicar` de `while` intentados. Traer algún ejercicio con `if` o `while` que haya dado problemas. |
-| 09/11 | 1) UT3: funciones de librerías y ejercicio de ejemplo <br>  2) Resolución dudas | Ejercicios para `practicar` terminados.  |
-| 16/11 | Cierre de UT3 y dudas antes de la evaluación | Ejercicios para `entregar` casi terminados. Dudas concretas de ejercicios. |
+| 26/10 | 1) UT3: condicionales<br> 2) librerías Python para sysadmin<br> 3) Resolución dudas | Ejercicios para `practicar` de `if` hechos.  Traer algún ejercicio que haya dado problemas. |
+| 09/11 | 1) UT3: bucles `while` y `for` <br> 2) Repaso librerías Python para sysadmin<br> 3) Resolución dudas | Ejercicios para `practicar` de `while` terminados.  Leída la teoría de `for` e intentado algún ejercicio.|
+| 16/11 | Cierre de UT3 y dudas antes de la evaluación | Ejercicios para `practicar` terminados.  Dudas concretas de ejercicios del bloque `entregar` de bucles. |
 | 09/12 | 1) UT5: listas, mutabilidad, copias y recorrido <br>  2) Resolución dudas | Ejercicios para `practicar` de listas intentados. |
 | 11/01 | 1) UT5: diccionarios y elección de estructura  <br>  2) Resolución dudas | Ejercicios para `practicar` de diccionarios intentados. |
 | 18/01 | Resolución dudas ejercicios para `entregar` listas y diccionarios | Ejercicios para `entregar` de diccionarios intentados. |
@@ -107,11 +107,11 @@ Seguimiento de entregar | `u01-introduccion-python-entregar` | Primeros ejercici
 
 | Fecha | Tipo | Rama | Entrega prevista |
 |---|---|---|---|
-| 25/10 | Seguimiento de practicar | `u03-control-flujo-sysadmin-practicar` | Ejercicios condicionales. |
-| 01/11 |  Seguimiento de practicar | `u03-control-flujo-sysadmin-practicar` | Ejercicios bucle while. |
-| 08/11 | Entrega de practicar | `u03-control-flujo-sysadmin-practicar` | Ejercicios bucle for. |
-| 15/11 | Seguimiento de entregar | `u03-control-flujo-sysadmin-entregar` | Ejercicios condicionales con enfoque sysadmin |
-| 22/11 | Entrega de entregar | `u03-control-flujo-sysadmin-entregar` | Ejercicios bucles con enfoque sysadmin.  Documenta lo que quede pendiente. |
+| 25/10 | Seguimiento de practicar | `u03-control-flujo-sysadmin-practicar` | Ejercicios `if` practicar (20 ejercicios). |
+| 01/11 | Seguimiento de entregar | `u03-control-flujo-sysadmin-entregar` | Ejercicios `if` entregar (8 ejercicios) con enfoque sysadmin. |
+| 08/11 | Seguimiento de practicar | `u03-control-flujo-sysadmin-practicar` | Ejercicios `while`practicar (10 ejercicios). |
+| 15/11 | Entrega final del bloque practicar (PR)| `u03-control-flujo-sysadmin-practicar` | Ejercicios `for` practicar (20 ejercicios). |
+| 22/11 | Entrega final del bloque entregar (PR)| `u03-control-flujo-sysadmin-entregar`  | Ejercicios bucles `while` y `for` (16 ejercicios) con enfoque sysadmin.  Reflexion.md. |
 
 
 ### UT5 - Estructuras de datos
