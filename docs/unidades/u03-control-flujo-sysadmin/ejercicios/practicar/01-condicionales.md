@@ -1,4 +1,4 @@
-# Ejercicios de clase: condicionales
+# Ejercicios practicar: condicionales
 
 
 
