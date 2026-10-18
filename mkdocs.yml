@@ -76,3 +76,17 @@ nav:
       - Índice: unidades/u02-objetos-cadenas/ejercicios/index.md
       - Practicar: unidades/u02-objetos-cadenas/ejercicios/practicar/index.md
       - Entregar: unidades/u02-objetos-cadenas/ejercicios/entregar/index.md
+  - UT3 - Control de flujo y librerías útiles para sysadmin:
+    - Presentación: unidades/u03-control-flujo-sysadmin/index.md
+    - Alineación RA: unidades/u03-control-flujo-sysadmin/alineacion-ra.md
+    - Teoría:
+      - 'Condicionales: tomar decisiones en un programa': unidades/u03-control-flujo-sysadmin/teoria/01-condicionales.md
+      - Bucles while: unidades/u03-control-flujo-sysadmin/teoria/02-while.md
+      - Bucles for, range() y recorridos: unidades/u03-control-flujo-sysadmin/teoria/03-for-range.md
+      - Depuración, errores y excepciones: unidades/u03-control-flujo-sysadmin/teoria/04-depuracion-excepciones.md
+      - Librerías útiles para administradores de sistemas: unidades/u03-control-flujo-sysadmin/teoria/05-librerias-sysadmin.md
+    - Ejercicios:
+      - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/index.md
+      - Practicar:
+        - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/practicar/index.md
+        - 'Ejercicios de clase: condicionales': unidades/u03-control-flujo-sysadmin/ejercicios/practicar/01-condicionales.md
