@@ -76,6 +76,10 @@ nav:
       - Índice: unidades/u02-objetos-cadenas/ejercicios/index.md
       - Practicar: unidades/u02-objetos-cadenas/ejercicios/practicar/index.md
       - Entregar: unidades/u02-objetos-cadenas/ejercicios/entregar/index.md
+    - Soluciones:
+      - Índice: unidades/u02-objetos-cadenas/soluciones/index.md
+      - Practicar: unidades/u02-objetos-cadenas/soluciones/practicar/index.md
+      - Entregar: unidades/u02-objetos-cadenas/soluciones/entregar/index.md
   - UT3 - Control de flujo y librerías útiles para sysadmin:
     - Presentación: unidades/u03-control-flujo-sysadmin/index.md
     - Alineación RA: unidades/u03-control-flujo-sysadmin/alineacion-ra.md
