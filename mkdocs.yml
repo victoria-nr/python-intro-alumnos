@@ -97,3 +97,8 @@ nav:
       - Entregar:
         - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/entregar/index.md
         - 'Ejercicios entregables: condicionales con enfoque sysadmin': unidades/u03-control-flujo-sysadmin/ejercicios/entregar/01-entregables-condicionales.md
+    - Soluciones:
+      - Índice: unidades/u03-control-flujo-sysadmin/soluciones/index.md
+      - Practicar:
+        - Índice: unidades/u03-control-flujo-sysadmin/soluciones/practicar/index.md
+        - Condicionales: unidades/u03-control-flujo-sysadmin/soluciones/practicar/condicionales/index.md
