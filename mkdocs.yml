@@ -94,6 +94,7 @@ nav:
       - Practicar:
         - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/practicar/index.md
         - 'Ejercicios de clase: condicionales': unidades/u03-control-flujo-sysadmin/ejercicios/practicar/01-condicionales.md
+        - 'Ejercicios de clase: bucle while': unidades/u03-control-flujo-sysadmin/ejercicios/practicar/02-while.md
       - Entregar:
         - Índice: unidades/u03-control-flujo-sysadmin/ejercicios/entregar/index.md
         - 'Ejercicios entregables: condicionales con enfoque sysadmin': unidades/u03-control-flujo-sysadmin/ejercicios/entregar/01-entregables-condicionales.md
