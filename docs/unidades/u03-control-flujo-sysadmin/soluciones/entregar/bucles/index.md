@@ -274,7 +274,7 @@ Idea clave: while True con if/elif/else para menú; break en opción salida term
 
 ### Ejercicio 9
 
-Idea clave: for anidado con range; zfill(2) formatea; parents=True crea carpetas padre.
+Idea clave: for  con range; zfill(2) formatea;
 
 ??? example "Ver solución"
     ```python
@@ -341,7 +341,7 @@ Idea clave: while True con break; múltiples contadores clasifican extensiones c
 
 ### Ejercicio 11
 
-Idea clave: for range(ini, fin+1); % 2 == 0 filtra pares; concatena partes IP.
+Idea clave: for range(ini, fin+1); % 2 == 0 filtra pares; concatenar partes IP.
 
 ??? example "Ver solución"
     ```python
@@ -360,7 +360,7 @@ Idea clave: for range(ini, fin+1); % 2 == 0 filtra pares; concatena partes IP.
 
 ### Ejercicio 12
 
-Idea clave: while True valida dos condiciones; for recorre cadena con isdigit().
+Idea clave: while True; validar dos condiciones; for recorre cadena; isdigit().
 
 ??? example "Ver solución"
     ```python
@@ -387,7 +387,7 @@ Idea clave: while True valida dos condiciones; for recorre cadena con isdigit().
 
 ### Ejercicio 13
 
-Idea clave: for itera carpeta; stat().st_mtime compara tiempos; mantén máximo.
+Idea clave: for itera carpeta; stat().st_mtime tiempo modificación; mantener el máximo.
 
 ??? example "Ver solución"
     ```python
